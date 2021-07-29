@@ -11,13 +11,13 @@ import { useLingui } from '@lingui/react'
 const items = (i18n: I18n) => [
     {
         name: i18n._(t`Twitter`),
-        description: i18n._(t`http://twitter.com/kukuswapio`),
-        href: 'http://twitter.com/kukuswapio'
+        description: i18n._(t`http://twitter.com/leoswapoff`),
+        href: 'http://twitter.com/leoswapoff'
     },
     {
         name: i18n._(t`Telegram`),
-        description: i18n._(`https://t.me/KuKuSwapio`),
-        href: 'https://t.me/KuKuSwapio'
+        description: i18n._(`https://t.me/leopswap`),
+        href: 'https://t.me/leoswap'
     }
 ]
 
