@@ -23,12 +23,12 @@ export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
 
 // KUKU
 export const KUKU: ChainTokenMap = {
-    [ChainId.KCC]: new Token(ChainId.KCC, '0x509195a9d762bc6f3282c874156bd2e45de86a10', 18, 'KUKU', 'KuKuToken')
+    [ChainId.BSC]: new Token(ChainId.BSC, '0x509195a9d762bc6f3282c874156bd2e45de86a10', 18, 'KUKU', 'KuKuToken')
 }
 
 // KUKU
 export const SUSHI: ChainTokenMap = {
-    [ChainId.KCC]: new Token(ChainId.KCC, '0x509195a9d762bc6f3282c874156bd2e45de86a10', 18, 'KUKU', 'KuKuToken')
+    [ChainId.BSC]: new Token(ChainId.BSC, '0x509195a9d762bc6f3282c874156bd2e45de86a10', 18, 'KUKU', 'KuKuToken')
 }
 
 // Default Ethereum chain tokens
@@ -190,7 +190,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
-    [ChainId.KCC]: [[KUKU[ChainId.KCC] as Token, WETH[ChainId.KCC]]]
+    [ChainId.BSC]: [[KUKU[ChainId.BSC] as Token, WETH[ChainId.BSC]]]
 }
 
 export interface WalletInfo {
@@ -266,7 +266,7 @@ export const BLOCKED_ADDRESSES: string[] = [
 
 // BentoBox Swappers
 export const BASE_SWAPPER: { [chainId in ChainId]?: string } = {
-    [ChainId.KCC]: '0x0'
+    [ChainId.BSC]: '0x0'
 }
 
 // Boring Helper
