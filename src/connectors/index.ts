@@ -58,5 +58,4 @@ export const walletlink = new WalletLinkConnector({
     appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png'
 })
 
-
-export const bsc = new BscConnector({ supportedChainIds: [56] })
+export const bscConnector = new BscConnector({ supportedChainIds: [56] })
