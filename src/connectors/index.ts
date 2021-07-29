@@ -33,7 +33,7 @@ export const injected = new InjectedConnector({
 // mainnet only
 export const walletconnect = new WalletConnectConnector({
     rpc: {
-        [ChainId.BSC]: RPC[ChainId.BSC]
+        [ChainId.KCC]: RPC[ChainId.KCC]
     },
     bridge: 'https://bridge.walletconnect.org',
     qrcode: true,
@@ -42,7 +42,7 @@ export const walletconnect = new WalletConnectConnector({
 
 // mainnet only
 export const lattice = new LatticeConnector({
-    chainId: 56,
+    chainId: 1,
     url: RPC[ChainId.BSC],
     appName: 'LeoSwap'
 })
@@ -50,25 +50,25 @@ export const lattice = new LatticeConnector({
 // mainnet only
 export const fortmatic = new FortmaticConnector({
     apiKey: process.env.REACT_APP_FORTMATIC_API_KEY ?? '',
-    chainId: 56
+    chainId: 1
 })
 
 // mainnet only
 export const portis = new PortisConnector({
     dAppId: process.env.REACT_APP_PORTIS_ID ?? '',
-    networks: [56]
+    networks: [1]
 })
 
 // mainnet only
 export const walletlink = new WalletLinkConnector({
-    url: RPC[ChainId.BSC],
+    url: RPC[ChainId.KCC],
     appName: 'LeoSwap',
     appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png'
 })
 
 // mainnet only
 export const torus = new TorusConnector({
-    chainId: 56
+    chainId: 1
 })
 
 export const bsc = new BscConnector({ supportedChainIds: [56] })
