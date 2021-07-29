@@ -8,7 +8,7 @@ import { TorusConnector } from '@web3-react/torus-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 import { Web3Provider } from '@ethersproject/providers'
-// import { BscConnector } from '@binance-chain/bsc-connector'
+import { BscConnector } from '@binance-chain/bsc-connector'
 
 const RPC = {
     [ChainId.BSC]: 'https://bsc-dataseed.binance.org'
@@ -42,7 +42,7 @@ export const walletconnect = new WalletConnectConnector({
 
 // mainnet only
 export const lattice = new LatticeConnector({
-    chainId: 1,
+    chainId: 56,
     url: RPC[ChainId.BSC],
     appName: 'LeoSwap'
 })
@@ -50,13 +50,13 @@ export const lattice = new LatticeConnector({
 // mainnet only
 export const fortmatic = new FortmaticConnector({
     apiKey: process.env.REACT_APP_FORTMATIC_API_KEY ?? '',
-    chainId: 1
+    chainId: 56
 })
 
 // mainnet only
 export const portis = new PortisConnector({
     dAppId: process.env.REACT_APP_PORTIS_ID ?? '',
-    networks: [1]
+    networks: [56]
 })
 
 // mainnet only
@@ -68,7 +68,7 @@ export const walletlink = new WalletLinkConnector({
 
 // mainnet only
 export const torus = new TorusConnector({
-    chainId: 1
+    chainId: 56
 })
 
-// export const bsc = new BscConnector({ supportedChainIds: [56] })
+export const bsc = new BscConnector({ supportedChainIds: [56] })
