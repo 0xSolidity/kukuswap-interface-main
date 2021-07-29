@@ -1,12 +1,12 @@
 import { ChainId } from '@kukuswap/sdk'
-// import { FortmaticConnector } from './Fortmatic'
- import { InjectedConnector } from '@web3-react/injected-connector'
-// import { LatticeConnector } from '@web3-react/lattice-connector'
- import { NetworkConnector } from './NetworkConnector'
-// import { PortisConnector } from '@web3-react/portis-connector'
-// import { TorusConnector } from '@web3-react/torus-connector'
- import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
-// import { WalletLinkConnector } from '@web3-react/walletlink-connector'
+import { FortmaticConnector } from './Fortmatic'
+import { InjectedConnector } from '@web3-react/injected-connector'
+import { LatticeConnector } from '@web3-react/lattice-connector'
+import { NetworkConnector } from './NetworkConnector'
+import { PortisConnector } from '@web3-react/portis-connector'
+import { TorusConnector } from '@web3-react/torus-connector'
+import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 import { Web3Provider } from '@ethersproject/providers'
 import { BscConnector } from '@binance-chain/bsc-connector'
 
@@ -26,14 +26,14 @@ export function getNetworkLibrary(): Web3Provider {
 
 export const injected = new InjectedConnector({
     supportedChainIds: [
-        56 // bsc
+        321 // kcc
     ]
 })
 
 // mainnet only
 export const walletconnect = new WalletConnectConnector({
     rpc: {
-        [ChainId.BSC]: RPC[ChainId.BSC]
+        [ChainId.KCC]: RPC[ChainId.KCC]
     },
     bridge: 'https://bridge.walletconnect.org',
     qrcode: true,
@@ -41,34 +41,35 @@ export const walletconnect = new WalletConnectConnector({
 })
 
 // mainnet only
-// export const lattice = new LatticeConnector({
-    // chainId: 1,
-    // url: RPC[ChainId.BSC],
-    // appName: 'LeoSwap'
-// })
+export const lattice = new LatticeConnector({
+    chainId: 1,
+    url: RPC[ChainId.KCC],
+    appName: 'KuKuSwap'
+})
 
 // mainnet only
-// export const fortmatic = new FortmaticConnector({
-    // apiKey: process.env.REACT_APP_FORTMATIC_API_KEY ?? '',
-    // chainId: 1
-// })
+export const fortmatic = new FortmaticConnector({
+    apiKey: process.env.REACT_APP_FORTMATIC_API_KEY ?? '',
+    chainId: 1
+})
 
 // mainnet only
-// export const portis = new PortisConnector({
-    // dAppId: process.env.REACT_APP_PORTIS_ID ?? '',
-    // networks: [1]
-// })
+export const portis = new PortisConnector({
+    dAppId: process.env.REACT_APP_PORTIS_ID ?? '',
+    networks: [1]
+})
 
 // mainnet only
-// export const walletlink = new WalletLinkConnector({
-  //  url: RPC[ChainId.BSC],
-   // appName: 'LeoSwap',
-  //  appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png'
-// })
+export const walletlink = new WalletLinkConnector({
+    url: RPC[ChainId.KCC],
+    appName: 'KuKuSwap',
+    appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png'
+})
 
 // mainnet only
-// export const torus = new TorusConnector({
- //   chainId: 1
-// })
+export const torus = new TorusConnector({
+    chainId: 1
+})
+
 
 export const bsc = new BscConnector({ supportedChainIds: [56] })
