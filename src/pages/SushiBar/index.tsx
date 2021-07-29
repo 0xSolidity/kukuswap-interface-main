@@ -17,7 +17,7 @@ const mockData = {
 export default function XKUKU() {
     const { account, chainId } = useActiveWeb3React()
 
-    const sushiBalance = useTokenBalance(SUSHI[ChainId.KCC]?.address ?? '')
+    const sushiBalance = useTokenBalance(SUSHI[ChainId.BSC]?.address ?? '')
     const xKUKUBalance = useTokenBalance(xKUKU?.address ?? '')
 
     return (
