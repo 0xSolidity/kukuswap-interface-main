@@ -21,7 +21,7 @@ export default function SwapHeader({ input = undefined, output = undefined }: an
                     activeClassName="font-bold text-high-emphesis md:bg-dark-900 md:border-gradient-filled"
                     to={{
                         pathname: '/swap',
-                        search: `?inputCurrency=${input && input.address ? input.address : 'ETH'}${
+                        search: `?inputCurrency=${input && input.address ? input.address : 'BNB'}${
                             output && output.address ? `&outputCurrency=${output.address}` : ''
                         }`
                     }}
@@ -38,7 +38,7 @@ export default function SwapHeader({ input = undefined, output = undefined }: an
                 <NavLink
                     className="flex items-center justify-center px-4 md:px-10 rounded-md text-center text-secondary hover:text-high-emphesis text-base font-medium"
                     activeClassName="text-high-emphesis font-bold md:bg-dark-900 md:border-gradient-filled"
-                    to={`/add/${input && input.address ? input.address : 'ETH'}${
+                    to={`/add/${input && input.address ? input.address : 'BNB'}${
                         output && output.address ? `/${output.address}` : ''
                     }`}
                     isActive={(match, location) => {
