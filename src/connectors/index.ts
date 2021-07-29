@@ -1,10 +1,8 @@
 import { ChainId } from '@kukuswap/sdk'
 import { FortmaticConnector } from './Fortmatic'
 import { InjectedConnector } from '@web3-react/injected-connector'
-import { LatticeConnector } from '@web3-react/lattice-connector'
 import { NetworkConnector } from './NetworkConnector'
 import { PortisConnector } from '@web3-react/portis-connector'
-import { TorusConnector } from '@web3-react/torus-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 import { Web3Provider } from '@ethersproject/providers'
@@ -26,7 +24,7 @@ export function getNetworkLibrary(): Web3Provider {
 
 export const injected = new InjectedConnector({
     supportedChainIds: [
-        56 // kcc
+        56 // bsc
     ]
 })
 
@@ -40,12 +38,6 @@ export const walletconnect = new WalletConnectConnector({
     pollingInterval: 15000
 })
 
-// mainnet only
-export const lattice = new LatticeConnector({
-    chainId: 1,
-    url: RPC[ChainId.BSC],
-    appName: 'KuKuSwap'
-})
 
 // mainnet only
 export const fortmatic = new FortmaticConnector({
@@ -62,13 +54,8 @@ export const portis = new PortisConnector({
 // mainnet only
 export const walletlink = new WalletLinkConnector({
     url: RPC[ChainId.BSC],
-    appName: 'KuKuSwap',
+    appName: 'LeoSwap',
     appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png'
-})
-
-// mainnet only
-export const torus = new TorusConnector({
-    chainId: 1
 })
 
 
