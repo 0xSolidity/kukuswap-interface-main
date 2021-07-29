@@ -6,10 +6,9 @@ import { Activity } from 'react-feather'
 import styled, { css } from 'styled-components'
 import CoinbaseWalletIcon from '../../assets/images/coinbaseWalletIcon.svg'
 import FortmaticIcon from '../../assets/images/fortmaticIcon.png'
-import LatticeIcon from '../../assets/images/gridPlusWallet.png'
 import PortisIcon from '../../assets/images/portisIcon.png'
 import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'
-import { fortmatic, injected, lattice, portis, walletconnect, walletlink } from '../../connectors'
+import { fortmatic, injected, portis, walletconnect, walletlink } from '../../connectors'
 import { NetworkContextName } from '../../constants'
 import useENSName from '../../hooks/useENSName'
 import { useWalletModalToggle } from '../../state/application/hooks'
@@ -138,12 +137,6 @@ function StatusIcon({ connector }: { connector: AbstractConnector }) {
         return (
             <IconWrapper size={16}>
                 <img src={WalletConnectIcon} alt={'Wallet Connect'} />
-            </IconWrapper>
-        )
-    } else if (connector === lattice) {
-        return (
-            <IconWrapper size={16}>
-                <img src={LatticeIcon} alt={'Lattice'} />
             </IconWrapper>
         )
     } else if (connector === walletlink) {
