@@ -5,10 +5,9 @@ import styled, { ThemeContext } from 'styled-components'
 import CoinbaseWalletIcon from '../../assets/images/coinbaseWalletIcon.svg'
 import FortmaticIcon from '../../assets/images/fortmaticIcon.png'
 import PortisIcon from '../../assets/images/portisIcon.png'
-import TorusIcon from '../../assets/images/torusIcon.png'
 import WalletConnectIcon from '../../assets/images/walletConnectIcon.svg'
 import { ReactComponent as Close } from '../../assets/images/x.svg'
-import { fortmatic, injected, portis, torus, walletconnect, walletlink } from '../../connectors'
+import { fortmatic, injected, portis, walletconnect, walletlink } from '../../connectors'
 import { SUPPORTED_WALLETS } from '../../constants'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { AppDispatch } from '../../state'
@@ -281,14 +280,7 @@ export default function AccountDetails({
                     </IconWrapper>
                 </>
             )
-        } else if (connector === torus) {
-            return (
-                <IconWrapper size={16}>
-                    <img src={TorusIcon} alt={'torus logo'} />
-                </IconWrapper>
-            )
-        }
-        return null
+        } return null
     }
 
     const clearAllTransactionsCallback = useCallback(() => {
