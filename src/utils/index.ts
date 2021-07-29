@@ -224,8 +224,8 @@ export function formattedPercent(percentString: any) {
 
 // Multichain Explorer
 const builders = {
-    kcc: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
-        const prefix = 'https://explorer.kcc.io'
+    bsc: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
+        const prefix = 'https://bscscan.com'
         switch (type) {
             case 'transaction':
                 return `${prefix}/tx/${data}`
