@@ -21,16 +21,16 @@ const PARAMS: {
         blockExplorerUrls: string[]
     }
 } = {
-    [ChainId.KCC]: {
-        chainId: '0x141',
-        chainName: 'KCC',
+    [ChainId.BSC]: {
+        chainId: '0x38',
+        chainName: 'BSC',
         nativeCurrency: {
-            name: 'KCC',
-            symbol: 'KCS',
+            name: 'BSC',
+            symbol: 'BNB',
             decimals: 18
         },
-        rpcUrls: ['https://rpc-mainnet.kcc.network'],
-        blockExplorerUrls: ['https://explorer.kcc.io']
+        rpcUrls: ['https://bsc-dataseed.binance.org'],
+        blockExplorerUrls: ['https://bscscan.com']
     }
 }
 
@@ -45,12 +45,12 @@ export default function NetworkModal(): JSX.Element | null {
         <Modal isOpen={networkModalOpen} onDismiss={toggleNetworkModal}>
             <ModalHeader onClose={toggleNetworkModal} title="Select a Network" />
             <div className="text-lg text-primary mb-6">
-                You are currently browsing <span className="font-bold text-pink">KUKU</span>
+                You are currently browsing <span className="font-bold text-pink">LEOSWAP</span>
                 <br /> on the <span className="font-bold text-blue">{NETWORK_LABEL[chainId]}</span> network
             </div>
 
             <div className="flex flex-col space-y-5 overflow-y-auto">
-                {[ChainId.KCC].map((key: ChainId, i: number) => {
+                {[ChainId.BSC].map((key: ChainId, i: number) => {
                     if (chainId === key) {
                         return (
                             <button key={i} className="bg-gradient-to-r from-blue to-pink w-full rounded p-px">
