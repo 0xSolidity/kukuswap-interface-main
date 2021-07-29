@@ -33,7 +33,7 @@ export const injected = new InjectedConnector({
 // mainnet only
 export const walletconnect = new WalletConnectConnector({
     rpc: {
-        [ChainId.KCC]: RPC[ChainId.KCC]
+        [ChainId.BSC]: RPC[ChainId.BSC]
     },
     bridge: 'https://bridge.walletconnect.org',
     qrcode: true,
@@ -61,7 +61,7 @@ export const portis = new PortisConnector({
 
 // mainnet only
 export const walletlink = new WalletLinkConnector({
-    url: RPC[ChainId.KCC],
+    url: RPC[ChainId.BSC],
     appName: 'LeoSwap',
     appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png'
 })
