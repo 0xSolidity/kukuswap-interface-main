@@ -86,17 +86,17 @@ function AppBar(): JSX.Element {
                                 <div className="flex flex-row items-center justify-center w-full lg:w-auto p-4 fixed left-0 bottom-0 bg-dark-1000 lg:relative lg:p-0 lg:bg-transparent">
                                     <div className="flex items-center justify-between sm:justify-end space-x-2 w-full">
                                         {chainId &&
-                                            [ChainId.KCC].includes(chainId) &&
+                                            [ChainId.BSC].includes(chainId) &&
                                             library &&
                                             library.provider.isMetaMask && (
                                                 <>
-                                                    <QuestionHelper text={i18n._(t`Add Kuku to your Metamask wallet`)}>
+                                                    <QuestionHelper text={i18n._(t`Add LEO to your Metamask wallet`)}>
                                                         <div
                                                             className="hidden sm:inline-block rounded-md bg-dark-900 hover:bg-dark-800 cursor-pointer"
                                                             onClick={() => {
                                                                 let address: string | undefined
                                                                 switch (chainId) {
-                                                                    case ChainId.KCC:
+                                                                    case ChainId.BSC:
                                                                         address =
                                                                             '0x509195A9d762BC6F3282c874156bd2E45dE86a10'
                                                                         break
@@ -105,7 +105,7 @@ function AppBar(): JSX.Element {
                                                                     type: 'ERC20',
                                                                     options: {
                                                                         address: address,
-                                                                        symbol: 'KUKU',
+                                                                        symbol: 'LEO',
                                                                         decimals: 18,
                                                                         image:
                                                                             'https://raw.githubusercontent.com/KukuSwap-KCC/icons/main/token/kuku.png'
@@ -125,7 +125,7 @@ function AppBar(): JSX.Element {
                                                                         .then(success => {
                                                                             if (success) {
                                                                                 console.log(
-                                                                                    'Successfully added KUKU to MetaMask'
+                                                                                    'Successfully added LEO to MetaMask'
                                                                                 )
                                                                             } else {
                                                                                 throw new Error('Something went wrong.')
