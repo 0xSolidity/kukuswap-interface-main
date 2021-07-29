@@ -243,9 +243,9 @@ interface ChainObject {
 }
 
 const chains: ChainObject = {
-    [ChainId.KCC]: {
-        chainName: 'KCC',
-        builder: builders.kcc
+    [ChainId.BSC]: {
+        chainName: 'BSC',
+        builder: builders.bsc
     }
 }
 
