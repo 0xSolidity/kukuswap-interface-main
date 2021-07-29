@@ -110,12 +110,12 @@ export default function LiquidityPositions() {
                 )}
 
                 <div className="flex gap-4 mt-5 mb-1">
-                    <Link to="/add/ETH" className="w-full">
+                    <Link to="/add/BNB" className="w-full">
                         <Button size="large" color="gradient">
                             {i18n._(t`Add Liquidity`)}
                         </Button>
                     </Link>
-                    <Link to="/create/ETH" className="w-full">
+                    <Link to="/create/BNB" className="w-full">
                         <Button size="large" className="w-full bg-dark-800 text-secondary">
                             {i18n._(t`Create a Pair`)}
                         </Button>
